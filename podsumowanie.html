@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Podsumowanie</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="shortcut icon" href="./img/szary-plomien.png" type="image/x-icon">
+</head>
+<body class="bg-light d-flex flex-column min-vh-100">
+    <header class="p-3 d-flex justify-content-between align-items-center text-white">
+        <img src="./img/banner2.png" alt="banner2" class="bg">
+        <div class="dim"></div>
+        <div class="logo content"><img src="./img/auto.png" alt="logo" width="70" height="70"></div>
+        <h1 class="m-0 textshade content">Podsumowanie formularza</h1>
+        <nav class="content">
+            <ul class="nav">
+                <li class="nav-item"><a class="nav-link text-white fw-bold navlink me-1 mb-1" href="index.html">Główna</a></li>
+                <li class="nav-item"><a class="nav-link text-white fw-bold navlink me-1 mb-1" href="hw.html">Co to HW?</a></li>
+                <li class="nav-item"><a class="nav-link text-white fw-bold navlink me-1 mb-1" href="poradnik.html">Poradnik</a></li>
+                <li class="nav-item"><a class="nav-link text-white fw-bold navlink me-1 mb-1" href="galeria.html">Galeria</a></li>
+                <li class="nav-item"><a class="nav-link text-white fw-bold navlink me-1 mb-1" href="kolekcja.html">Kolekcja</a></li>
+                <li class="nav-item"><a class="nav-link text-white fw-bold navlink me-1 mb-1" href="ulubione.html">Ulubione</a></li>
+                <li class="nav-item"><a class="nav-link text-white fw-bold navlink me-1 mb-1" href="faq.html">FAQ</a></li>
+                <li class="nav-item"><a class="nav-link text-white fw-bold navlink mb-1" href="kontakt.html">Kontakt</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="flex-grow-1 container p-4 my-4 bg-white border border-dark rounded">
+        <h2 class="border-bottom border-dark pb-2 mb-4">Podsumowanie wpisanych danych</h2>
+        <table class="table table-bordered border-dark">
+            <thead class="table-light">
+                <tr>
+                    <th class="w-25">Nazwa pola</th>
+                    <th>Wartość wpisana przez użytkownika</th>
+                </tr>
+            </thead>
+            <tbody class="table-light">
+                <tr><td class="fw-bold">Imię</td><td id="wynik-imie"></td></tr>
+                <tr><td class="fw-bold">Nazwisko</td><td id="wynik-nazwisko"></td></tr>
+                <tr><td class="fw-bold">E-mail</td><td id="wynik-email"></td></tr>
+                <tr><td class="fw-bold">Telefon</td><td id="wynik-telefon"></td></tr>
+                <tr><td class="fw-bold">Temat</td><td id="wynik-temat"></td></tr>
+                <tr><td class="fw-bold">Wiadomość</td><td id="wynik-wiadomosc"></td></tr>
+            </tbody>
+        </table>
+        <a href="kontakt.html" class="btn btn-dark fw-bold mt-3">Wróć do formularza</a>
+    </main>
+
+    <footer class="bg-dark text-white text-center p-3 mt-auto w-100">
+        <p class="m-0">Dziennik Hot Wheelsów &copy; 2026</p>
+    </footer>
+
+    <script>
+        document.getElementById('wynik-imie').textContent = sessionStorage.getItem('imie');
+        document.getElementById('wynik-nazwisko').textContent = sessionStorage.getItem('nazwisko');
+        document.getElementById('wynik-email').textContent = sessionStorage.getItem('email');
+        document.getElementById('wynik-telefon').textContent = sessionStorage.getItem('telefon');
+        document.getElementById('wynik-temat').textContent = sessionStorage.getItem('temat');
+        document.getElementById('wynik-wiadomosc').textContent = sessionStorage.getItem('wiadomosc');
+    </script>
+</body>
+</html>
